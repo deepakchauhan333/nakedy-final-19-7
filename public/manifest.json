@@ -1,0 +1,27 @@
+{
+  "name": "NakedifyAI.com - Best Adult AI Tools Directory",
+  "short_name": "NakedifyAI",
+  "description": "Discover the best NSFW AI tools, adult chatbots, image generators, and more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#ef4444",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["entertainment", "lifestyle"],
+  "lang": "en",
+  "dir": "ltr"
+}

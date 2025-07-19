@@ -1,0 +1,69 @@
+{
+  "buildCommand": "npm run build",
+  "framework": "nextjs",
+  "functions": {
+    "app/api/**/*.ts": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "regions": ["iad1"],
+  "env": {
+    "NEXT_PUBLIC_SUPABASE_URL": "https://qzjfqtuefrocvjrablmq.supabase.co",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF6amZxdHVlZnJvY3ZqcmFibG1xIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTA1MDE1MDksImV4cCI6MjA2NjA3NzUwOX0.3LL3j6W4cY0cwrfEYZdXLipXI8Ii2_LtJkKUAKUOsxE",
+    "NODE_ENV": "production"
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    },
+    {
+      "source": "/_next/static/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/tools/:slug",
+      "destination": "/ai/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/admin",
+      "destination": "/admindeepak",
+      "permanent": true
+    },
+    {
+      "source": "/tool/:slug",
+      "destination": "/ai/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/categories/:slug",
+      "destination": "/category/:slug",
+      "permanent": true
+    }
+  ]
+}
