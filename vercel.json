@@ -3,7 +3,7 @@
   "framework": "nextjs",
   "functions": {
     "app/api/**/*.ts": {
-      "runtime": "nodejs18.x"
+      "runtime": "nodejs16.x"  // Change to nodejs16.x if nodejs18.x is problematic
     }
   },
   "regions": ["iad1"],
